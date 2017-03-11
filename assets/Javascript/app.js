@@ -30,8 +30,8 @@ $(document).ready(function() {
     //ajax calls api
     function displayGifs() {
         var heroAction = $(this).attr("data-name");
-        var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + heroAction + "&api_key=dc6zaTOxFJmzC&limit=10";
-        console.log(queryURL); // displays the constructed url
+        var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + heroAction + "&api_key=dc6zaTOxFJmzC&limit=10";
+       // console.log(queryURL); 
         $.ajax({
                 url: queryURL,
                 method: 'GET'
