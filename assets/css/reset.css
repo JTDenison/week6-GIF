@@ -1,0 +1,39 @@
+body{
+    background: url("https://images6.alphacoders.com/322/thumb-1920-322791.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    color: black;
+}
+* {
+    box-sizing: border-box;
+}
+img { 
+    height: 150px;
+    width: 150px;
+    margin: 10px;
+
+}
+.btn {
+    /* adding spacing between each button*/
+    margin: 3px;
+    background-color: dimgray;
+    border-color: #fff;
+}
+.gifDiv{
+    float: left;
+    margin: 3px;
+}
+.container {
+    background-color: #fff;
+    opacity: 0.9;
+    padding: 20px;
+}
+.jumbotron {
+    background-color: inherit;
+}
+.jumbotron .h1, .jumbotron h1 {
+    color: red;
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+    display: inline;
+}
