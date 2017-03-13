@@ -1,9 +1,9 @@
 $(document).ready(function() {
     // An array of supa heros
     var heros = ["Wolverine", "Cable", "Deadpool", "Cyclops", "Magneto", "Punisher", "Thanos", "Venom", "Hulk", "Thor"];
-    // Funct for assigning  and displaying gif buttons
+    // Func for assigning  and displaying gif buttons
     function displayGifButtons() {
-        $("#gifButtonsView").empty();
+        $("#gifButtonsView").empty(); // make a div and give it properties
         for (var i = 0; i < heros.length; i++) {
             var gifButton = $("<button>");
             gifButton.addClass("heroAction");
@@ -31,17 +31,17 @@ $(document).ready(function() {
     function displayGifs() {
         var heroAction = $(this).attr("data-name");
         var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + heroAction + "&api_key=dc6zaTOxFJmzC&limit=10";
-       // console.log(queryURL); 
+        // console.log(queryURL); 
         $.ajax({
                 url: queryURL,
                 method: 'GET'
             }) // USE .done
             .done(function(response) {
                 console.log(response);
-                $("#gifsView").empty(); // dumping the div 
+                $("#gifsView").empty(); // dumping the div d
                 var results = response.data; //shows results of gifs
                 if (results == "") {
-                    alert("There isn't a gif for this selected button"); //addded a no gifs found
+                    alert("There isn't a gif for this selected button"); //addded a no gifs found ... for my inaverdant typo
                 }
                 for (var i = 0; i < results.length; i++) {
                     var gifDiv = $("<div>"); //div for the gifs to go inside
@@ -58,7 +58,7 @@ $(document).ready(function() {
                     gifImage.attr("data-state", "still");
                     gifImage.addClass("image");
                     gifDiv.append(gifImage);
-                    // adding div of gifs to gifsView div ---- 10
+                    // adding div of gifs to gifsView div ----  limit 10
                     $("#gifsView").prepend(gifDiv);
                 }
             });

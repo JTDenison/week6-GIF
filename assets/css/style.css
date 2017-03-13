@@ -14,7 +14,6 @@ img {
 
 }
 .btn {
-    /* adding spacing between each button*/
     margin: 3px;
     background-color: dimgray;
     border-color: #fff;
@@ -31,7 +30,7 @@ img {
 .jumbotron {
     background-color: inherit;
 }
-.jumbotron .h1, .jumbotron h1 {
+.jumbotron, h1,  {
     color: red;
     font-family: 'Oswald', sans-serif;
     text-align: center;
